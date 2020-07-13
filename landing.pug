@@ -1,29 +1,5 @@
--var titulo = "Titulo principal"
--var titulos = ["Titulo principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
--var usuario = "Julio"
-mixin  caja(imagen, titulo, contenido)
-    .caja
-        .caja__imagen: img(src="images/"+imagen, alt="alt")
-        .caja__contenido
-            h3=titulo
-            p=contenido
-            a.boton Leer más
-
-
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/ejercicio-pug.css")
-        title Document
-    body
-        header 
-            h1 #{titulos[0]}
-            if usuario 
-                a Hola #{usuario}
-            else 
-                a(href="").boton Registro
+extend components/plantilla.pug
+block contenidos
         section.intro
             .intro__imagen: img(src="images/imagen.png", alt="alt")
             .intro__contenido
